@@ -1,4 +1,4 @@
-fun addOneAndPrintName(number, name) {
+fun addOneAndPrintName(number: Int, name: String) {
     println(number+1)
     println(name)
 }  
