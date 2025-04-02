@@ -8,6 +8,5 @@ fun main() {
 
     val morethings = mutableListOf(21, 29)
     morethings.add(42)
-    morethings = mutableListOf(12)
     println(morethings)
 }
