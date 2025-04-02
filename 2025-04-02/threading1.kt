@@ -2,7 +2,7 @@
 class ExampleThread(val id: Int) : Thread() {
     override fun run() {
         var total = 0
-        for (num in 0..<100000) {
+        for (num in 0..<10000000) {
             total += num
         }
         println("Hi from thread $id $total")
