@@ -1,7 +1,11 @@
 // built in class named Thread that you inherit from
 class ExampleThread(val id: Int) : Thread() {
     override fun run() {
-        println("Hi from thread $id")
+        var total = 0
+        for (num in 0..<100000) {
+            total += num
+        }
+        println("Hi from thread $id $total")
     }
 }
 
