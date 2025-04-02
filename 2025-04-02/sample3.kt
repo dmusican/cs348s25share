@@ -1,5 +1,7 @@
 class Student(var name: String, var age: Int) {
 
+    var haircolor = "none"
+    
     fun display() {
         println(name)
         println(age)
