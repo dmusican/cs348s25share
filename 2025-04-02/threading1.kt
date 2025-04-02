@@ -3,7 +3,7 @@ class ExampleThread(val id: Int) : Thread() {
     override fun run() {
         var total = 0.0
         for (num in 0..<10000000) {
-            total += Math.sin(num)
+            total += Math.sin((num+0.0)
         }
         println("Hi from thread $id $total")
     }
