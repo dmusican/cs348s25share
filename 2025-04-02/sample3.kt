@@ -1,6 +1,6 @@
 class Student(var name: String, var age: Int) {
 
-    def display() {
+    fun display() {
         println(name)
         println(age)
     }
