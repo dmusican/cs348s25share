@@ -1,7 +1,7 @@
 fun addOneAndPrintName(number: Int, name: String): Int {
     println(number+1)
     println(name)
-    return 3
+    return 12
 }  
 
 fun main() {
