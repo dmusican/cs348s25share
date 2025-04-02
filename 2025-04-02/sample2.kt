@@ -1,6 +1,7 @@
-fun addOneAndPrintName(number: Int, name: String) {
+fun addOneAndPrintName(number: Int, name: String): Int {
     println(number+1)
     println(name)
+    return 3
 }  
 
 fun main() {
@@ -15,5 +16,5 @@ fun main() {
     morethings.add(42)
     println(morethings)
 
-    addOneAndPrintName(3, "dave")
+    println(addOneAndPrintName(3, "dave"))
 }
