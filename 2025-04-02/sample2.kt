@@ -14,4 +14,6 @@ fun main() {
     val morethings = mutableListOf(21, 29)
     morethings.add(42)
     println(morethings)
+
+    addOneAndPrintName(3, "dave")
 }
