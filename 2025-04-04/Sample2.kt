@@ -16,12 +16,13 @@ fun main() {
         myThread.start()
         allThreads.add(myThread)
     }
-    for (myThread in allThreads) {
-        myThread.join()  // wait for thread to finish
-    }
+    // for (myThread in allThreads) {
+    //     myThread.join()  // wait for thread to finish
+    // }
 
     // Get answers from each when done
     for (myThread in allThreads) {
+        myThread.join()
         println("Answer from ${myThread.i} is ${myThread.answer}")
     }
 
