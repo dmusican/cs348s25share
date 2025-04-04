@@ -2,7 +2,8 @@ class AnswerThread(var i: Int) : Thread() {
     var answer = 0
 
     override fun run() {
-        for (j in 0..<100000) {
+        for (j in 0..<100) {
+            Thread.sleep(1)
             answer = answer + j
         }
     }
