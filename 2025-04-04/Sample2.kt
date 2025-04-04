@@ -8,4 +8,17 @@ class AnswerThread(var i: Int) : Thread() {
     }
 }
 
-fun main()
+fun main() {
+    val allThreads = mutableListOf<AnswerThread>()
+    for (i in 0..<20) {
+        val myThread = AnswerThread(i)
+        myThread.start()
+        allThreads.add(myThread)
+    }
+    // Get answers from each when done
+    // bad below, wait we'll fix
+    for (myThread in allThreads) {
+        println("Answer from ${myThread.i} is ${myThread.answer}")
+    }
+
+}
