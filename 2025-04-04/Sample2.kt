@@ -16,7 +16,7 @@ fun main() {
         allThreads.add(myThread)
     }
     for (myThread in allThreads) {
-        myThread.join()
+        myThread.join()  // wait for thread to finish
     }
 
     // Get answers from each when done
