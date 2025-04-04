@@ -15,8 +15,11 @@ fun main() {
         myThread.start()
         allThreads.add(myThread)
     }
+    for (myThread in allThreads) {
+        myThread.join()
+    }
+
     // Get answers from each when done
-    // bad below, wait we'll fix
     for (myThread in allThreads) {
         println("Answer from ${myThread.i} is ${myThread.answer}")
     }
