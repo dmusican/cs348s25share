@@ -14,4 +14,5 @@ fun main() {
             println("Hello again from thread $i. Counter is now $counter.")
         }
     }
+    println("Final counter value $counter")
 }
