@@ -12,7 +12,7 @@ fun main() {
     val allThreads = mutableListOf<AnswerThread>()
     for (i in 0..<20) {
         val myThread = AnswerThread(i)
-        myThread.run()
+        myThread.start()
         allThreads.add(myThread)
     }
     for (myThread in allThreads) {
