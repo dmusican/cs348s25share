@@ -1,0 +1,5 @@
+#surefire_0
+#Mon Apr 07 14:54:33 CDT 2025
+basedir=/home/dmusicant/currentwork/cs348s25share/2025-04-07/forkjoin
+localRepository=/home/dmusicant/.m2/repository
+test=SumForkJoinTest
