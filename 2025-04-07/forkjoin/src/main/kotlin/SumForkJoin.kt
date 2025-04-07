@@ -18,8 +18,8 @@ suspend fun sumTask(arr: List<Int>, lo: Int, hi: Int, seqCutoff: Int): Int {
         val mid = (lo + hi) / 2
         return coroutineScope {
             val left = async { sumTask(arr, lo, mid, seqCutoff)}
-                val right = sumTask(arr, mid, hi, seqCutoff)
-                left.await() + right
+            val right = sumTask(arr, mid, hi, seqCutoff)
+            left.await() + right
         }
 
     }
