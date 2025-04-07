@@ -4,7 +4,7 @@ fun doStuff() {
         val myThread = thread {
             var counter = 0
             for (i in 0..<1000) {
-                Thread.sleep(1)
+                Thread.sleep(10)
                 counter++
             }
             println("Hello from thread $i. Counter is now $counter.")
