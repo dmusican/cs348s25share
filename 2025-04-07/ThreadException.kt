@@ -1,6 +1,5 @@
 import kotlin.concurrent.thread
 fun doStuff() {
-    var counter = 0
     for (i in 0..<200) {
         val myThread = thread {
             var counter = 0
