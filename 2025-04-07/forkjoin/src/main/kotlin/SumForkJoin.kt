@@ -1,6 +1,6 @@
 import kotlinx.coroutines.*
 
-// This program recursively finds the sum of all of the prime values of an array
+// This program recursively finds the COUNT of all of the prime values of an array
 // in parallel using Java's ForkJoin Framework. This example is originally fom
 // Dan Grossman's A Sophomoric Introduction to Shared-Memory Parallelism and
 // Concurrency, Chapter 3. (Dave Musicant modified it a lot, and converted it to
