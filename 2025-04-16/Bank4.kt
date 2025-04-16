@@ -1,5 +1,4 @@
-class Bank3(_balance: Int) {
-    private val bankLock = Any()
+class Bank4(_balance: Int) {
     var balance = _balance
         set(value) {
             field = value
@@ -9,13 +8,13 @@ class Bank3(_balance: Int) {
         }
 
     fun withdraw(amt: Int) {
-        synchronized(bankLock) {
+        synchronized(this) {
             balance -= amt
         }
     }
 
     fun deposit(amt: Int) {
-        synchronized(bankLock) {
+        synchronized(this) {
             balance += amt
         }
     }
