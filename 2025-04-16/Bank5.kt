@@ -7,15 +7,13 @@ class Bank4(_balance: Int) {
             return field
         }
 
+    @Synchronized
     fun withdraw(amt: Int) {
-        synchronized(this) {
             balance -= amt
-        }
     }
 
+    @Synchronized
     fun deposit(amt: Int) {
-        synchronized(this) {
             balance += amt
-        }
     }
 }
