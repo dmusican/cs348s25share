@@ -9,10 +9,14 @@ class Bank2(_balance: Int) {
         }
 
     fun withdraw(amt: Int) {
-        balance -= amt
+        synchronized {
+            balance -= amt
+        }
     }
 
     fun deposit(amt: Int) {
-        balance += amt
+        synchronized {
+            balance += amt
+        }
     }
 }
