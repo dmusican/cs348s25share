@@ -1,4 +1,4 @@
-class Bank2(_balance: Int) {
+class Bank3(_balance: Int) {
     private val bankLock = Any()
     var balance = _balance
         set(value) {
