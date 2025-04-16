@@ -1,4 +1,4 @@
-class Bank1(_balance: Int) {
+class Bank2(_balance: Int) {
 
     var balance = _balance
         set(value) {
