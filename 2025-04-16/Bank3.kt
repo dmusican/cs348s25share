@@ -1,5 +1,5 @@
 class Bank2(_balance: Int) {
-    private val bankLock = "hellogoodfriend"
+    private val bankLock = Any()
     var balance = _balance
         set(value) {
             field = value
