@@ -1,6 +1,6 @@
 import kotlin.concurrent.thread
 fun main() {
-    val acct = Bank1(0)
+    val acct = Bank2(0)
     val numtimes = 100000
     val t1 = thread {
         for (i in 0..<numtimes) {
