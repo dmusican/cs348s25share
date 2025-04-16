@@ -7,6 +7,9 @@ class Bank4(_balance: Int) {
             return field
         }
 
+    // Same as Bank4
+    // all code in this method is in a synchronized
+    // block with "this" as the object
     @Synchronized
     fun withdraw(amt: Int) {
             balance -= amt
