@@ -3,6 +3,7 @@
 
 import kotlin.concurrent.thread
 import kotlin.random.Random
+@Volatile
 var sharedValue = 0
 
 fun main() {
