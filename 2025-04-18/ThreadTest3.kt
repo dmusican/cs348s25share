@@ -12,7 +12,6 @@ fun main() {
         while (true){
             if( localValue != sharedValue){
                 println("Read new sharedValue : $sharedValue")
-                println("Count = $count")
                 localValue = sharedValue;
             }
         }
