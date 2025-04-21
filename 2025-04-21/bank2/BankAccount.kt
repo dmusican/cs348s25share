@@ -13,11 +13,21 @@ class BankAccount(val id: Int, var balance: Int) {
     }                                     // line F
 
     fun transferTo(amt: Int, other: BankAccount) {
-        synchronized (this) {
-            synchronized (other) {
-                this.withdraw(amt)
-                other.deposit(amt)
+        if (this.id < other.id) {
+            synchronized (this) {
+                synchronized (other) {
+                    this.withdraw(amt)
+                    other.deposit(amt)
+                }
             }
+        } else {
+            synchronized (other) {
+                synchronized (this) {
+                    this.withdraw(amt)
+                    other.deposit(amt)
+                }
+            }
+
         }
     }
 }
