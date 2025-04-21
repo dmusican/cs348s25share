@@ -12,10 +12,13 @@ class BankAccount(var balance: Int) {
         balance += amt;                   // line E
     }                                     // line F
 
-    @Synchronized                                    // line G
     fun transferTo(amt: Int, other: BankAccount) {
-        this.withdraw(amt)                           // line H
-        other.deposit(amt)                           // line I
+        synchronized (this) {
+            synchronized (other) {
+                this.withdraw(amt)
+                other.deposit(amt)
+            }
+        }
     }
 }
 
