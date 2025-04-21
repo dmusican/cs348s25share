@@ -1,6 +1,6 @@
 import kotlin.concurrent.thread
 
-class BankAccount(var balance: Int) {
+class BankAccount(val id: Int, var balance: Int) {
 
     @Synchronized                         // line A
     fun withdraw(amt: Int) {
@@ -23,8 +23,8 @@ class BankAccount(var balance: Int) {
 }
 
 fun main() {
-    val one = BankAccount(1000)
-    val two = BankAccount(2000)
+    val one = BankAccount(1, 1000)
+    val two = BankAccount(2, 2000)
 
     val t1 = thread {
         while (true) {
