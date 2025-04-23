@@ -11,7 +11,7 @@ class Drop {
         lock.withLock {
             while (!full) condition.await()
             full = false
-            condition.signal()
+            condition.signalAll()
             return message
         }
     }
@@ -21,7 +21,7 @@ class Drop {
             while (full) condition.await()
             full = true
             this.message = message
-            condition.signal()
+            condition.signalAll()
         }
     }
 }
