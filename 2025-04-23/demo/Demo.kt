@@ -9,7 +9,7 @@ class Drop {
 
     fun take(): String {
         lock.withLock {
-            if (!full) condition.await()
+            while (!full) condition.await()
             full = false
             condition.signal()
             return message
@@ -18,7 +18,7 @@ class Drop {
 
     fun put(message: String) {
         lock.withLock {
-            if (full) condition.await()
+            while (full) condition.await()
             full = true
             this.message = message
             condition.signal()
