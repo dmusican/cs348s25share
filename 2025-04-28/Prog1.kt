@@ -18,6 +18,6 @@ fun doit1() {
     if (checkstring(u)){
         println("don't do that")
     } else {
-        println(u.count())
+        println(u!!.count())
     }
 }
