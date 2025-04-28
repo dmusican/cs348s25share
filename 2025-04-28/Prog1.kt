@@ -1,5 +1,5 @@
 fun checkstring(a: String?): Boolean {
-    if (1 == 2) {
+    if (1 == 1) {
         return true
     } else {
         return false
