@@ -1,15 +1,6 @@
-import kotlin.concurrent.thread
-var thing = object : ThreadLocal<Int>() {
-    override fun initialValue(): Int {
-        return 0
-    }
-}
+import java.util.concurrent.locks.ReentrantLock
 
 fun main() {
-    val t1 = thread {
-        thing.set(8)
-        println("thing is ${thing.get()}")
-    }
-    t1.join()
-    println(thing.get())
+    val lock = ReentrantLock()
+
 }
