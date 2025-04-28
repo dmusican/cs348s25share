@@ -1,5 +1,9 @@
 import kotlin.concurrent.thread
-var thing = 5
+var thing = ThreadLocal<Int>() {
+    override fun initialValue(): Int {
+        return 0
+    }
+}
 
 fun main() {
     val t1 = thread {
