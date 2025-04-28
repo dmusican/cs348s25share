@@ -1,4 +1,4 @@
-fun checkstring(a: String): Boolean {
+fun checkstring(a: String?): Boolean {
     if (1 == 2) {
         return true
     } else {
