@@ -1,5 +1,5 @@
 import kotlin.concurrent.thread
-var thing = ThreadLocal<Int>() {
+var thing = object : ThreadLocal<Int>() {
     override fun initialValue(): Int {
         return 0
     }
