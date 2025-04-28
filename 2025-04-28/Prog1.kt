@@ -1,1 +1,4 @@
-fun 1()
+fun doit1() {
+    var s = "hello"
+    s = null
+}
