@@ -1,9 +1,10 @@
 fun checkstring(a: String?): Boolean {
-    if (1 == 1) {
-        return true
-    } else {
-        return false
-    }
+    return (a == null)
+    // if (1 == 1) {
+    //     return true
+    // } else {
+    //     return false
+    // }
 
 }
 
