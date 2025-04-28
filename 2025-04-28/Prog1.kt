@@ -1,3 +1,13 @@
+fun checkstring(a: String): Boolean {
+    if (1 == 2) {
+        return true
+    } else {
+        return false
+    }
+
+}
+
+
 fun doit1() {
     var s: String = "hello"
     println(s.count())
@@ -10,7 +20,7 @@ fun doit1() {
     }
 
     var u: String? = "bye"
-    if (u == null) {
+    if (checkstring(u)){
         println("don't do that")
     } else {
         println(u.count())
