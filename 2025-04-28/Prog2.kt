@@ -7,9 +7,9 @@ var thing = object : ThreadLocal<Int>() {
 
 fun main() {
     val t1 = thread {
-        thing = 8
-        println("thing is $thing")
+        thing.set(8)
+        println("thing is ${thing.get()}")
     }
     t1.join()
-    println(thing)
+    println(thing.get())
 }
