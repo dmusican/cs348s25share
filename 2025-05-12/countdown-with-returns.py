@@ -9,6 +9,8 @@ def countdown(n):
 
 COUNT = int(1e8)
 
+q1 = mp.Queue(1)  # size of queue
+q2 = mp.Queue(1)
 t1 = mp.Process(target=countdown,args=(COUNT,))
 t2 = mp.Process(target=countdown,args=(COUNT*2,))
 start = time.time()
