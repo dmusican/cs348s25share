@@ -6,6 +6,7 @@ def countdown(n, queue):
     while n > 0:
         n -= 1
         sum = sum + n
+    queue.put(sum)
 
 COUNT = int(1e8)
 
