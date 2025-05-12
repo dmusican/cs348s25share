@@ -13,6 +13,7 @@ fun main() {
     // parallel: functions that follow execute
     // concurrently separately for each item
     // in the stream
+    // using the Java ForkJoin thread pool
     myList.stream().parallel().forEach { print("$it ") }
     println()
 }
