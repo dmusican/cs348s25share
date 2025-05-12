@@ -9,8 +9,8 @@ def countdown(n):
 
 COUNT = int(1e8)
 
-t1 = mp.Process(target=countdown,args=(COUNT//2,))
-t2 = mp.Process(target=countdown,args=(COUNT//2,))
+t1 = mp.Process(target=countdown,args=(COUNT,))
+t2 = mp.Process(target=countdown,args=(COUNT*2,))
 start = time.time()
 t1.start()
 t2.start()
