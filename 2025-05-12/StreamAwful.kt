@@ -3,7 +3,7 @@ fun main() {
 
     var total = 0
     val answer = IntStream.range(0, 1_000)
-        // .parallel()
+        .parallel()
         .mapToDouble {
             val value = total
             Thread.sleep(1)
