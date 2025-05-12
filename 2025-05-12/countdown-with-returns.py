@@ -1,7 +1,7 @@
 import multiprocessing as mp
 import time
 
-def countdown(n):
+def countdown(n, queue):
     sum = 0
     while n > 0:
         n -= 1
@@ -11,8 +11,8 @@ COUNT = int(1e8)
 
 q1 = mp.Queue(1)  # size of queue
 q2 = mp.Queue(1)
-t1 = mp.Process(target=countdown,args=(COUNT,))
-t2 = mp.Process(target=countdown,args=(COUNT*2,))
+t1 = mp.Process(target=countdown,args=(COUNT, q1))
+t2 = mp.Process(target=countdown,args=(COUNT*2, q2))
 start = time.time()
 t1.start()
 t2.start()
