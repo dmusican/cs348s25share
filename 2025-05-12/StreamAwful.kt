@@ -1,6 +1,7 @@
 import java.util.stream.IntStream
 fun main() {
 
+    @Volatile
     var total = 0
     val answer = IntStream.range(0, 1_000)
         .parallel()
