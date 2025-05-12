@@ -1,7 +1,7 @@
 import java.util.stream.IntStream
 
-    @Volatile
-    var total = 0
+@Volatile
+var total = 0
 fun main() {
 
     val answer = IntStream.range(0, 1_000)
