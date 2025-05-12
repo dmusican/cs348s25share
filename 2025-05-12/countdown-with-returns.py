@@ -2,8 +2,10 @@ import multiprocessing as mp
 import time
 
 def countdown(n):
+    sum = 0
     while n > 0:
         n -= 1
+        sum = sum + n
 
 COUNT = int(1e8)
 
