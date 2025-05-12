@@ -9,6 +9,10 @@ fun main() {
     // and other capabilities as function/method calls
     // Very similar to higher order functions in Scheme
     // (if you've seen that)
+    //
+    // parallel: functions that follow execute
+    // concurrently separately for each item
+    // in the stream
     myList.stream().parallel().forEach { print("$it ") }
     println()
 }
