@@ -1,16 +1,14 @@
-from threading import Thread
+import multiprocessing as mp
 import time
 
 def countdown(n):
     while n > 0:
         n -= 1
-        if n % 100 == 0:
-            time.sleep(1)
 
 COUNT = int(1e3)
 
-t1 = Thread(target=countdown,args=(COUNT//2,))
-t2 = Thread(target=countdown,args=(COUNT//2,))
+t1 = mp.Process(target=countdown,args=(COUNT//2,))
+t2 = mp.Process(target=countdown,args=(COUNT//2,))
 start = time.time()
 t1.start()
 t2.start()
