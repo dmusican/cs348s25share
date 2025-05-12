@@ -14,6 +14,12 @@ fun main() {
     // concurrently separately for each item
     // in the stream
     // using the Java ForkJoin thread pool
-    myList.stream().parallel().forEach { print("$it ") }
-    println()
+    // myList.stream().parallel().forEach { print("$it ") }
+    // println()
+
+    // More calculations
+    val answer = IntStream.range(0, 10_000_000)
+        .mapToDouble { Math.sin(it.toDouble()) }
+        .reduce { a,b -> a + b )
+    println(answer)
 }
