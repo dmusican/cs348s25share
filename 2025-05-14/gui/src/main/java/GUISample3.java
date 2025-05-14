@@ -9,7 +9,6 @@ import javafx.stage.Stage;
 
 import java.util.stream.IntStream;
 
-// Exceptions throws because updating off thread. Also, this is getting ugly.
 public class GUISample3 extends Application {
 
     public static void main(String[] args) {
