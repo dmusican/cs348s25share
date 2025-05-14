@@ -21,12 +21,6 @@ fun main() {
         .forEach { prime -> IntStream.rangeClosed(prime, limit/prime)
                                 .forEach { index ->  isPrime[index*prime] = false } }
 
-
-
-
-
-
-
                  }
         }
 
@@ -34,7 +28,7 @@ fun main() {
 
         // Keep just the prime numbers
 
-        .filter { _______________________________________________________}
+        .filter { i -> isPrime[i] }
 
         .count()
 
