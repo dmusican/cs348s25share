@@ -18,7 +18,7 @@ fun main() {
         // Set all multiples of that prime within range to be not prime
         // Don't use a direct loop, do it via streams
 
-        .forEach { prime -> IntStream.rangeClosed(prime, limit)
+        .forEach { prime -> IntStream.rangeClosed(prime, limit/prime)
                                 .forEach { index ->  isPrime[index*prime] = false } }
 
 
