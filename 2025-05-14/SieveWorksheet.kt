@@ -9,17 +9,17 @@ fun main() {
     IntStream
         // Use all integers up to the square root of the limit as the sieve choices
 
-        .rangeClosed(2, ___________________________________)
+        .rangeClosed(2, Math.sqrt(limit.toDouble()).toInt())
 
         // Use only those that are know to be prime
 
-        .filter { ______________________________________________ }
+        .filter { number -> isPrime[number] }
 
         // Set all multiples of that prime within range to be not prime
         // Don't use a direct loop, do it via streams
 
-        .forEach { prime ->
-
+        .forEach { prime -> IntStream.rangeClosed(prime, limit)
+                                .forEach { index ->  isPrime[index*prime] = false } }
 
 
 
