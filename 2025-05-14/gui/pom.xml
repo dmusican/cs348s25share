@@ -24,7 +24,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.3</version>
                 <configuration>
-                    <mainClass>GUISample5</mainClass>
+                    <mainClass>GUISample</mainClass>
                 </configuration>
             </plugin>
         </plugins>
