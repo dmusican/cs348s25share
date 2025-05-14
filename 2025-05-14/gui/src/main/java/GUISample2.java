@@ -10,7 +10,6 @@ import javafx.stage.Stage;
 import java.util.stream.IntStream;
 
 // Fixed it by threading it, but answer never comes back, or join
-// gets us back to where we where
 public class GUISample2 extends Application {
 
     public static void main(String[] args) {
