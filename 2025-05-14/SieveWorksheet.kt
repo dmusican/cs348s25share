@@ -9,16 +9,13 @@ fun main() {
 
     IntStream
         // Use all integers up to the square root of the limit as the sieve choices
-
         .rangeClosed(2, Math.sqrt(limit.toDouble()).toInt())
 
         // Use only those that are know to be prime
-
         .filter { number -> isPrime[number] }
 
         // Set all multiples of that prime within range to be not prime
         // Don't use a direct loop, do it via streams
-
         .forEach { prime -> IntStream.rangeClosed(prime, limit/prime)
                                 .forEach { index ->  isPrime[index*prime] = false } }
 
@@ -31,9 +28,7 @@ fun main() {
     val count = IntStream.rangeClosed(2, limit)
 
     // Keep just the prime numbers
-
         .filter { i -> isPrime[i] }
-
         .count()
 
     println("Number of primes up to $limit: $count")
