@@ -26,6 +26,7 @@ fun main() {
     //     .forEach { i -> println(i) }
 
     val count = IntStream.rangeClosed(2, limit)
+        .parallel()
 
     // Keep just the prime numbers
         .filter { i -> isPrime[i] }
