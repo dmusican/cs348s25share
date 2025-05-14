@@ -19,10 +19,10 @@ fun main() {
                                 .forEach { index ->  isPrime[index*prime] = false } }
 
 
-    IntStream.rangeClosed(2, limit)
-    // Keep just the prime numbers
-        .filter { i -> isPrime[i] }
-        .forEach { i -> println(i) }
+    // IntStream.rangeClosed(2, limit)
+    // // Keep just the prime numbers
+    //     .filter { i -> isPrime[i] }
+    //     .forEach { i -> println(i) }
 
     val count = IntStream.rangeClosed(2, limit)
 
