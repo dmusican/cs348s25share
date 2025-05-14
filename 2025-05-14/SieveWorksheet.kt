@@ -1,8 +1,7 @@
 import java.util.stream.IntStream;
 
 fun main() {
-    // val limit = 500000000 // Limit to find prime numbers up to
-    val limit = 50 // Limit to find prime numbers up to
+    val limit = 500000000 // Limit to find prime numbers up to
 
     // Create a boolean array "isPrime" and initialize all entries as true
     val isPrime= Array<Boolean>(limit+1) { true }
