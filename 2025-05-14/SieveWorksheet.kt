@@ -21,12 +21,10 @@ fun main() {
         .forEach { prime -> IntStream.rangeClosed(prime, limit/prime)
                                 .forEach { index ->  isPrime[index*prime] = false } }
 
-                 }
-        }
 
     val count = IntStream.rangeClosed(2, limit)
 
-        // Keep just the prime numbers
+    // Keep just the prime numbers
 
         .filter { i -> isPrime[i] }
 
@@ -36,8 +34,8 @@ fun main() {
 }
 
 
-    // Followup questions:
-    // Where can .parallel() be added to speed things up?
-    //
-    // Where is a place that someone might be tempted to add .parallel(), but would
-    // just make things worse?
+// Followup questions:
+// Where can .parallel() be added to speed things up?
+//
+// Where is a place that someone might be tempted to add .parallel(), but would
+// just make things worse?
