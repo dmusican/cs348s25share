@@ -54,7 +54,7 @@ public class GUISample2 extends Application {
                 e.printStackTrace();
             }
             label.setText("The answer is " + w.answer);
-            grid.getChildren().remove(bar);
+            // grid.getChildren().remove(bar);
         });
 
         primaryStage.setScene(new Scene(grid, 500, 250));
