@@ -13,6 +13,8 @@ fun main() {
         // Use only those that are know to be prime
         .filter { number -> isPrime[number] }
 
+        .parallel()
+
         // Set all multiples of that prime within range to be not prime
         // Don't use a direct loop, do it via streams
         .forEach { prime -> IntStream.rangeClosed(prime, limit/prime)
