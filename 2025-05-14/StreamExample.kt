@@ -3,7 +3,7 @@ fun main() {
 
     IntStream
         .rangeClosed(1,10)
-        .parallel()
+        // .parallel()
         .map { it ->
             println("hey")
             it
