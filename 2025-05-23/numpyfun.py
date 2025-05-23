@@ -13,4 +13,5 @@ print(a)
 print(a*2)
 a[0][0] = 12
 a[0][1] = 18
+print()
 print(a)
