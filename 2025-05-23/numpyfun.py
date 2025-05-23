@@ -11,3 +11,6 @@ print(z)
 a = np.ones((4,2))
 print(a)
 print(a*2)
+a[0][0] = 12
+a[0][1] = 18
+print(a)
