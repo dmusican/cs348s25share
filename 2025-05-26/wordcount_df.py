@@ -1,5 +1,6 @@
 from pyspark.sql import SparkSession
 from pyspark.sql import DataFrame
+import pyspark.sql.functions as f
 
 inputFilename = 'alice.txt'
 
@@ -10,7 +11,10 @@ spark = (SparkSession
 
 lines = spark.read.text(inputFilename)
 
-lines.show()
+
+result = lines.select(f.split('value', ' '))
+
+result.show()
 
 # words = lines.flatMap(lambda line: line.split(" "))
 # # print(words.take(50))
