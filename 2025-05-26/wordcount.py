@@ -9,3 +9,5 @@ conf = (SparkConf()
 spark = SparkContext(conf)
 
 lines = spark.textFile(inputFilename)
+
+print(lines)
