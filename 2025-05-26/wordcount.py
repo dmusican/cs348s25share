@@ -10,4 +10,4 @@ spark = SparkContext(conf=conf)
 
 lines = spark.textFile(inputFilename)
 
-print(lines)
+print(lines.take(10))
