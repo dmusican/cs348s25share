@@ -1,14 +1,14 @@
-from pyspark import SparkConf
-from pyspark import SparkContext
+from pyspark import SparkSession
+from pyspark import DataFrame
 
 inputFilename = 'alice.txt'
 
-conf = (SparkConf()
-        .setAppName("WordCount")
-        .setMaster("local"))
-spark = SparkContext(conf=conf)
+spark = (SparkSession
+         .builder
+         .appName("WordCount")
+         .getOrCreate())
 
-lines = spark.textFile(inputFilename)
+lines = spark.read.text(inputFilename)
 
 words = lines.flatMap(lambda line: line.split(" "))
 # print(words.take(50))
