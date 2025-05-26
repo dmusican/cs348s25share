@@ -6,7 +6,7 @@ inputFilename = 'alice.txt'
 conf = (SparkConf()
         .setAppName("WordCount")
         .setMaster("local"))
-spark = SparkContext(conf)
+spark = SparkContext(conf=conf)
 
 lines = spark.textFile(inputFilename)
 
