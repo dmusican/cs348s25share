@@ -1,5 +1,5 @@
-from pyspark import SparkSession
-from pyspark import DataFrame
+from pyspark.sql import SparkSession
+from pyspark.sql import DataFrame
 
 inputFilename = 'alice.txt'
 
