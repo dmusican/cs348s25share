@@ -11,4 +11,7 @@ spark = SparkContext(conf=conf)
 lines = spark.textFile(inputFilename)
 
 words = lines.flatMap(lambda line: line.split(" "))
-print(words.take(50))
+# print(words.take(50))
+
+words_with_ones = words.map(lambda word: (word, 1))
+print(words_with_ones.take(10))
