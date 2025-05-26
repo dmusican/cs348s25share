@@ -21,4 +21,4 @@ words_with_ones = words.map(lambda word: (word, 1))
 counts = (words_with_ones
           .(reduceByKey(lambda a, b: a+b)  #type: ignore
             )
-print(counts.take(10)
+print(counts.take(10))
