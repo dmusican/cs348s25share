@@ -10,6 +10,5 @@ spark = SparkContext(conf=conf)
 
 lines = spark.textFile(inputFilename)
 
-result = lines.flatMap(lambda line: line.split(" "))
-
-print(result.take(50))
+words = lines.flatMap(lambda line: line.split(" "))
+print(words.take(50))
