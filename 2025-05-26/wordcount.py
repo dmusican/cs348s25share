@@ -19,4 +19,4 @@ words_with_ones = words.map(lambda word: (word, 1))
 # reduceByKey assumes key to aggregate is first of
 # tuple
 counts = words_with_ones.reduceByKey(lambda a, b: a+b)
-counts.take(1)
+print((counts.take(10))
