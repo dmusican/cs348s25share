@@ -14,4 +14,4 @@ words = lines.flatMap(lambda line: line.split(" "))
 # print(words.take(50))
 
 words_with_ones = words.map(lambda word: (word, 1))
-print(words_with_ones.take(10))
+print(words_with_ones.take(50))
