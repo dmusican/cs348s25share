@@ -10,4 +10,6 @@ spark = SparkContext(conf=conf)
 
 lines = spark.textFile(inputFilename)
 
-print(lines.take(10))
+result = lines.map(lambda line: line.split(" "))
+
+print(result.take(10))
