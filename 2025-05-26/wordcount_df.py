@@ -15,6 +15,7 @@ lines = spark.read.text(inputFilename)
 result = (lines
           .select(f.explode(f.split('value', ' '))
                   .alias("word"))
+          .groupBy('word').count()
           )
 
 result.show()
