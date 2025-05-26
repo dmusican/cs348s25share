@@ -6,3 +6,4 @@ inputFilename = 'alice.txt'
 conf = (SparkConf()
         .setAppName("WordCount")
         .setMaster("local"))
+spark = SparkContext(conf)
