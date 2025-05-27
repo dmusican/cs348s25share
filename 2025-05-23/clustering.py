@@ -13,6 +13,7 @@ def importData():
 
     with open(filename) as file:
         allrows = [[float(value) for value in line.strip().split()] for line in file]
+        # allrows = allrows[:100]
         return np.array(allrows)
 
 def cluster(data, k):
